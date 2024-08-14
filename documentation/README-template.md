@@ -1,111 +1,95 @@
-# Frontend Mentor - Article preview component solution
+# Frontend Mentor - Challenge Title
 
-This is a solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [X coding challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/).
 
-## Table of contents
+Frontend Mentor challenges help improve skills by building realistic projects.
+
+## Table of contents:
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshot](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+## Overview:
 
-## Overview
-
-### The challenge
-
+### The challenge:
+**To do this challenge, you need a basic understanding of HTML, CSS and a tiny bit of JavaScript.**
 Users should be able to:
 
-- View the optimal layout for the component depending on their device's screen size
-- See the social media share links when they click the share icon
+- View the optimal layout depending on their device's screen size
+- Get it looking as close to the design as possible.
+- See a hover state on desktop
 
-### Screenshot
+<br>
 
-![](./screenshot.jpg)
+Preview of initial design:
+![Design preview for the Order summary card coding challenge](./documentation/design/desktop-preview.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+### Screenshots:
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+<div align="center">
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+| Fullscreen View (Desktop)                             |
+| ----------------------------------------------------- |
+| ![](documentation/design-finished/0.1-Original.jpg) | 
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+| Animated Preview |
+| ---------------------------------------------------------------------------------- |
+| ![](documentation/design-finished/0.3-animatedResult.gif)                                        |
 
-### Links
+<br>
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+**Note: This is a Mobile-First Approach & Wait for the GIF to load**
 
-## My process
+<br>
 
-### Built with
+All viewports were included (except for the 4k view), in case the observer wishes to see the minor changes.
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+<br>
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+| Desktop View (1440px)                                | Laptop View (1024px)                                | Tablet View (768px)                                    |
+| ---------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------ |
+| ![](documentation/design-finished/1.0-Desktop.jpg) | ![](documentation/design-finished/1.1-Laptop.jpg) | ![](documentation/design-finished/1.2-Tablet.jpg) |
 
-### What I learned
+| Mobile L (430px)                                     | Mobile M (375px)                          | Mobile S (320px)                          |
+| ----------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| ![](documentation/design-finished/1.3-MobileL.jpg) | ![](documentation/design-finished/1.4-MobileM.jpg) | ![](documentation/design-finished/1.5-MobileS.jpg) |
+</div>
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+### Links:
 
-To see how you can add code snippets, see below:
+- Live Site URL: [Website Link - Click Me](https://mark-siazon.github.io/)
+- Solution URL: [FrontEndMentor - Click Me](https://www.frontendmentor.io/solutions/)
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+## My process:
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+### Built with:
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- HTML5, CSS3
+- Mobile-First Approach
+  - Grid Layout + Flexbox
+- SASS/SCSS
 
-### Continued development
+### What I learned:
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Recap over some of the major learnings while working through this project:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+#### General things I've learned:
 
-### Useful resources
+- Review of Semantic HTML & CSS, CSS Flex Layout
+- Learned how to also use Grid Layout
+- Writing DRY code by combining similar styles
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+<hr>
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+## Author:
 
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Github - [@Iron-Mark](https://github.com/Iron-Mark)
+- Github - [@Mark-Siazon](https://github.com/Mark-Siazon)
+- Frontend Mentor - [@Iron-Mark](https://www.frontendmentor.io/profile/Iron-Mark)
+  - _(The Assets used in this project is originally from FrontendMentor)_
