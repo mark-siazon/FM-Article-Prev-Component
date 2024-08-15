@@ -1,0 +1,12 @@
+// Import Fonts
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+@import 'scss/variables.scss'; // for variables
+@import 'scss/mixins.scss'; // for mixins
+@import 'scss/global.scss'; // for global styles
+@import 'scss/components.scss';  // for component-specific styles
+@import 'scss/media.scss';  // for component-specific styles
+@import 'scss/typography.scss'; // for typography styles
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
