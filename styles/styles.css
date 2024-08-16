@@ -1,19 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 @import url("");
-.author .profile, .author, main > section .info, main, body {
+.socials, div :has(svg.share-btn), .profile, .author, .info, main.card, body {
   display: flex;
 }
 
-main > section .info, body {
+div :has(svg.share-btn), .info, main.card, body {
   flex-direction: column;
 }
 
-.author, main, body {
+.socials, div :has(svg.share-btn), .author, main.card, body {
   align-items: center;
 }
 
-main, body {
+.socials, div :has(svg.share-btn), main.card, body {
   justify-content: center;
+}
+
+div :has(svg.share-btn), .profile img {
+  border-radius: 50%;
+}
+
+.profile div span, .info strong + p {
+  font-weight: 400;
+}
+
+.profile div p, .info strong {
+  font-weight: 700;
+}
+
+main.card {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -27,97 +43,168 @@ body {
   font-family: Manrope;
 }
 
+button {
+  border: none;
+}
+
 .d-none {
   display: none;
 }
 
-main {
-  width: clamp(280px, 80vw, 720px);
-  max-height: 300px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+main.card {
   border-radius: 10px;
+  max-width: 310px;
 }
-main > div:first-child > img {
+@media only screen and (min-width: 720px) {
+  main.card {
+    flex-direction: row;
+    width: 80vw;
+    max-width: 720px;
+    max-height: 286px;
+  }
+}
+main.card > div {
+  max-height: 200px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 720px) {
+  main.card > div {
+    width: 100%;
+    max-height: 286px;
+  }
+}
+main.card > div > img {
+  display: block;
+  border-radius: 10px 10px 0 0;
   width: 100%;
+  object-fit: cover;
 }
-main > section {
-  padding: 26px 40px;
+@media only screen and (min-width: 720px) {
+  main.card > div > img {
+    border-radius: 10px 0 0 10px;
+  }
 }
-main > section .info {
+@media only screen and (min-width: 720px) {
+  main.card > div > img {
+    width: clamp(300px, 200%, 375px);
+  }
+}
+@media only screen and (min-width: 900px) {
+  main.card > div > img {
+    width: clamp(300px, 140%, 480px);
+  }
+}
+
+section > div {
+  margin: 26px;
+}
+
+.info {
   gap: 20px;
-}
-main > section .info strong {
-  color: #48556A;
-  font-size: 20px;
-  font-weight: 700;
-}
-main > section .info strong + p {
-  color: #48556A;
-  font-family: Manrope;
-  font-size: 13px;
-  font-weight: 400;
 }
 
 .author {
   justify-content: space-between;
-  margin-top: 30px;
-}
-.author .profile {
-  gap: 10px;
-}
-.author .profile img {
-  width: 46px;
-}
-.author .profile div {
-  color: #48556A;
-  font-family: Manrope;
-  font-size: 12px;
-  font-style: normal;
-  line-height: normal;
-  margin: auto;
-}
-.author .profile div p {
-  font-weight: 700;
-}
-.author .profile div span {
-  font-weight: 300;
 }
 
-div :has(img.share-btn) {
-  display: flex;
+.author-active {
+  padding: 13px 26px;
+  margin: 0;
+  border-radius: 0 0 10px 10px;
+}
+@media only screen and (min-width: 720px) {
+  .author-active {
+    position: relative;
+  }
+  .author-active .socials {
+    padding: 13px 26px;
+    margin: 0;
+    border-radius: 12px;
+    background: hsl(217, 19%, 35%);
+    position: absolute;
+    right: -75px;
+    top: -51px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+  .author-active .socials::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 16px solid hsl(217, 19%, 35%);
+    border-right: 16px solid hsl(217, 19%, 35%);
+    border-top: 36px solid hsl(217, 19%, 35%);
+    transform: rotate(45deg);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: -2;
+    top: 14px;
+    margin-left: 5px;
+  }
+  .author-active .socials-btn {
+    position: absolute;
+    right: 23px;
+    top: 16px;
+  }
+}
+
+.profile {
+  gap: 10px;
+}
+.profile img {
+  width: 46px;
+}
+.profile div {
+  margin: auto;
+}
+
+div :has(svg.share-btn) {
+  cursor: pointer;
+  color: hsl(214, 17%, 51%);
   width: 40px;
   height: 40px;
   padding: 0px 20px;
-  background-color: rgba(109, 127, 151, 0.136);
-  border-radius: 50%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  background-color: rgba(108, 167, 249, 0.1);
+}
+div :has(svg.share-btn) :hover, div :has(svg.share-btn) :active, div :has(svg.share-btn) :focus, div :has(svg.share-btn) :focus-within {
+  background-color: hsl(214, 17%, 51%);
+  color: hsl(210, 46%, 95%);
 }
 
-.profile img {
-  border-radius: 50%;
+.socials {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(210, 46%, 95%);
+  font-size: 13px;
+  gap: 20px;
+}
+
+.info strong {
+  color: hsl(217, 19%, 35%);
+  font-size: 16px;
+}
+.info strong + p {
+  color: hsl(214, 17%, 51%);
+  font-size: 13px;
+  word-spacing: 3px;
+  line-height: 1.35;
+}
+
+.profile div {
+  font-size: 12px;
+}
+.profile div p {
+  color: hsl(217, 19%, 35%);
+}
+.profile div span {
+  color: hsl(212, 23%, 69%);
 }
 
 .attribution {
+  margin: 50px 0;
   font-size: 11px;
   text-align: center;
 }
-
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-main > div:first-child {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; /* To ensure the image doesn't overflow the container */
-}
-
-main > div:first-child > img {
-  display: block;
-  width: 135%;
-  height: clamp(100%, 100%, 1000px);
-  object-fit: cover; /* This ensures the image covers the entire div without distorting */
 }/*# sourceMappingURL=styles.css.map */

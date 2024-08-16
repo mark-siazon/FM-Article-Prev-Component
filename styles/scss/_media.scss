@@ -1,12 +1,12 @@
 // Define breakpoints
-$breakpoint-small: 576px;
-$breakpoint-medium: 768px;
+$breakpoint-small: 720px;
+$breakpoint-medium: 900px;
 $breakpoint-large: 1200px;
 
 // Mixin for media queries
 @mixin respond-to($breakpoint) {
   @if $breakpoint == small {
-    @media only screen and (max-width: #{$breakpoint-small}) { @content; }
+    @media only screen and (min-width: #{$breakpoint-small}) { @content; }
   } @else if $breakpoint == medium {
     @media only screen and (min-width: #{$breakpoint-medium}) { @content; }
   } @else if $breakpoint == large {

@@ -17,89 +17,10 @@ body{
   font-family: Manrope;
 }
 
+button{
+  border: none;
+}
+
 .d-none{
   display: none;
-}
-
-main{
-  width: clamp(280px, 80vw, 720px);
-  max-height: 300px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  @extend %d-flex;
-  @extend %align-center;
-  @extend %justify-center;
-
-  > div:first-child > img {
-    width: 100%;
-  }
-
-  > section{
-    padding: 26px 40px;
-
-
-    .info{
-      @extend %d-flex;
-      @extend %col;
-      gap: 20px;
-      strong{
-        color: #48556A;
-        font-size: 20px;
-        font-weight: 700;
-      }
-      strong+p{
-        color: #48556A;
-        font-family: Manrope;
-        font-size: 13px;
-        font-weight: 400;
-      }
-    }
-
-  }
-}
-
-.author{
-  @extend %d-flex;
-  @extend %align-center;
-  justify-content: space-between;
-  margin-top: 30px;
-
-  .profile{
-    @extend %d-flex;
-    gap: 10px;
-  
-    img{
-      width: 46px;
-    }
-
-    div{
-      color: #48556A;
-      font-family: Manrope;
-      font-size: 12px;
-      font-style: normal;
-      line-height: normal;
-      margin: auto;
-      p{
-        font-weight: 700;
-      }
-      span{
-        font-weight: 300;
-      }
-    }
-  
-  }
-}
-
-
-div :has(img.share-btn){
-  display: flex;
-  width: 40px;
-  height: 40px;
-  padding: 0px 20px;
-  background-color: rgba(109, 127, 151, 0.136);
-  border-radius: 50%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }

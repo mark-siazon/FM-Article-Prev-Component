@@ -1,3 +1,112 @@
-.profile img {
-  border-radius: 50%;
+main.card{   
+  border-radius: 10px;
+  @extend %box-shadow;
+  @extend %d-flex;
+  @extend %align-center;
+  @extend %justify-center;
+  @extend %col;
+  max-width: 310px;
+
+  @include respond-to(small){
+    flex-direction: row;
+    width: 80vw;
+    max-width: 720px;
+    max-height: 286px;
+  }
+  
+  > div{
+    max-height: 200px;
+    overflow: hidden;
+
+    @include respond-to(small){
+      width: 100%;
+      max-height: 286px;
+    }
+  }
+  
+  > div > img {
+    display: block;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    object-fit: cover;
+
+    @include respond-to(small){
+      border-radius: 10px 0 0 10px;
+    }
+  
+    @include respond-to(small){
+      width: clamp(300px, 200%, 375px);
+    }
+  
+    @include respond-to(medium){
+      width: clamp(300px, 140%, 480px);
+    }
+  }
+}
+
+section > div{
+  margin: 26px;
+}
+
+.info{
+  @extend %d-flex;
+  @extend %col;
+  gap: 20px;
+}
+
+.author{
+  @extend %d-flex;
+  @extend %align-center;
+  justify-content: space-between;
+}
+
+.author-active {
+  @include author-active-mob();
+
+  @include respond-to(small){
+    @include author-active-desktop();
+  }
+}
+
+.profile{
+  @extend %d-flex;
+  gap: 10px;
+
+  img{ 
+    @extend %border-circle;
+    width: 46px; 
+  }
+  div{ margin: auto; }
+}
+
+div :has(svg.share-btn){
+  @extend %d-flex;
+  @extend %col;
+  @extend %justify-center;
+  @extend %align-center;
+  @extend %border-circle;
+  cursor: pointer;
+  color: $desaturated-dark-blue;
+
+  width: 40px;
+  height: 40px;
+  padding: 0px 20px;
+  background-color: rgba(108, 167, 249, 0.1);
+  
+  :hover, :active, :focus, :focus-within{
+      background-color: $desaturated-dark-blue;
+      color: $light-grayish-blue;
+  }
+}
+
+.socials{
+  @extend %d-flex;
+  @extend %justify-center;
+  @extend %align-center;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing:5px;
+  color: $light-grayish-blue;
+  font-size: 13px;
+  gap: 20px;
 }
