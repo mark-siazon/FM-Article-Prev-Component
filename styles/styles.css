@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 @import url("");
-.socials, div :has(svg.share-btn), .profile, .author, .info, main.card, body {
+.socials, div :has(svg.share-btn), .profile, .author, .info, main.card > section, main.card, body {
   display: flex;
 }
 
-div :has(svg.share-btn), .info, main.card, body {
+div :has(svg.share-btn), .info, main.card > section, main.card, body {
   flex-direction: column;
 }
 
@@ -60,7 +60,7 @@ main.card {
     flex-direction: row;
     width: 80vw;
     max-width: 720px;
-    max-height: 286px;
+    max-height: 250px;
   }
 }
 main.card > div {
@@ -70,7 +70,17 @@ main.card > div {
 @media only screen and (min-width: 720px) {
   main.card > div {
     width: 100%;
-    max-height: 286px;
+    max-height: 240px;
+  }
+}
+main.card > section {
+  align-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 310px;
+}
+@media only screen and (min-width: 720px) {
+  main.card > section {
+    max-width: unset;
   }
 }
 main.card > div > img {
@@ -95,23 +105,26 @@ main.card > div > img {
   }
 }
 
-section > div {
-  margin: 26px;
-}
-
 .info {
   gap: 20px;
+  margin: 1.625rem;
+  height: fit-content;
 }
 
 .author {
   justify-content: space-between;
+  margin: 0 1.625rem 13px;
+  height: auto;
+}
+@media only screen and (max-width: 720px) {
+  .author {
+    padding: 0 26px 13px;
+    margin: 0;
+    background: hsl(217, 19%, 35%);
+    border-radius: 0 0 10px 10px;
+  }
 }
 
-.author-active {
-  padding: 13px 26px;
-  margin: 0;
-  border-radius: 0 0 10px 10px;
-}
 @media only screen and (min-width: 720px) {
   .author-active {
     position: relative;
@@ -143,18 +156,25 @@ section > div {
   .author-active .socials-btn {
     position: absolute;
     right: 23px;
-    top: 16px;
+    top: 5px;
   }
 }
 
 .profile {
   gap: 10px;
+  flex: 2;
+  text-align: left;
+}
+@media only screen and (min-width: 720px) {
+  .profile {
+    flex: 1;
+  }
 }
 .profile img {
   width: 46px;
 }
 .profile div {
-  margin: auto;
+  margin: auto 0;
 }
 
 div :has(svg.share-btn) {
@@ -171,11 +191,6 @@ div :has(svg.share-btn) :hover, div :has(svg.share-btn) :active, div :has(svg.sh
 }
 
 .socials {
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  color: hsl(210, 46%, 95%);
-  font-size: 13px;
   gap: 20px;
 }
 
@@ -198,6 +213,15 @@ div :has(svg.share-btn) :hover, div :has(svg.share-btn) :active, div :has(svg.sh
 }
 .profile div span {
   color: hsl(212, 23%, 69%);
+}
+
+.socials {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(210, 46%, 95%);
+  font-size: 13px;
+  gap: 20px;
 }
 
 .attribution {
