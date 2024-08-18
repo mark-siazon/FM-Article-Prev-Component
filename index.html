@@ -23,7 +23,7 @@
         </p>
       </div>
 
-      <div class="author">
+      <div class="author author-active"> <!-- author-active -->
         <div class="profile">
           <img src="assets/avatar-michelle.jpg" alt="A picture of the author, Michelle Appleton">
           <div>
@@ -32,17 +32,21 @@
           </div>
         </div>
         
-        <div class="socials">
-          <div class="d-none">
-            <p>Share</p>
-            <img src="assets/icon-facebook.svg" alt="Social icon of Facebook">
-            <img src="assets/icon-twitter.svg" alt="Social icon of Twitter">
-            <img src="assets/icon-pinterest.svg" alt="Social icon of Pinterest">
-          </div>
-          <div>
-            <img class="share-btn" src="assets/icon-share.svg" alt="Button icon of share to social media">
-          </div>
+        <div class="socials d-none">
+          <p>Share</p>
+          <img src="assets/icon-facebook.svg" alt="Social icon of Facebook">
+          <img src="assets/icon-twitter.svg" alt="Social icon of Twitter">
+          <img src="assets/icon-pinterest.svg" alt="Social icon of Pinterest">
         </div>
+
+        <button onclick="socmed_btn()" class="socials-btn">
+          <div>
+            <svg class="share-btn" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+              <path fill="currentcolor" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+            </svg>
+          </div>
+        </button>
+
       </div>
     </section>
 
@@ -53,5 +57,7 @@
       Frontend Mentor </a> <br>
     Coded by <a href="https://github.com/mark-siazon">M. Siazon</a>.
   </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>

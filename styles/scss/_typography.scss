@@ -1,0 +1,37 @@
+.info{
+  strong{
+    color: $vdark-grayish-blue;
+    font-size: 16px;
+    @extend %fw-700;
+  }
+  strong+p{
+    color: $desaturated-dark-blue;
+    font-size: 13px;
+    @extend %fw-400;
+    word-spacing: 3px;
+    line-height: 1.35;
+  }
+}
+
+.profile{
+  div{
+    font-size: 12px;
+    p{
+      color: $vdark-grayish-blue;
+      @extend %fw-700;
+    }
+    span{
+      color: $grayish-blue;
+      @extend %fw-400;
+    }
+  }
+}
+
+.socials {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing:5px;
+  color: $light-grayish-blue;
+  font-size: 13px;
+  gap: 20px;
+}
