@@ -124,6 +124,11 @@ main.card > div > img {
     border-radius: 0 0 10px 10px;
   }
 }
+@media only screen and (min-width: 900px) {
+  .author {
+    max-width: 100%;
+  }
+}
 
 @media only screen and (min-width: 720px) {
   .author-active {
@@ -135,8 +140,8 @@ main.card > div > img {
     border-radius: 12px;
     background: hsl(217, 19%, 35%);
     position: absolute;
-    right: -75px;
-    top: -51px;
+    right: -95px;
+    top: -63px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   }
   .author-active .socials::after {
@@ -150,12 +155,12 @@ main.card > div > img {
     transform: rotate(45deg);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: -2;
-    top: 14px;
+    top: 10px;
     margin-left: 5px;
   }
   .author-active .socials-btn {
     position: absolute;
-    right: 23px;
+    right: 0;
     top: 5px;
   }
 }

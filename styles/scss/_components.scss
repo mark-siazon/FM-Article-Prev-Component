@@ -76,6 +76,10 @@ main.card{
   @include respond-to(xsmall){
     @include author-mob();
   }
+
+  @include respond-to(medium){
+    max-width: 100%;
+  }
 }
 
 .author-active {
@@ -92,6 +96,7 @@ main.card{
 
   @include respond-to(small){
     flex: 1;
+
   }
 
   img{ 
