@@ -1,30 +1,85 @@
-let sbtn = document.querySelector(".socials-btn");
-let socials = document.querySelector(".socials");
-let profile = document.querySelector(".profile");
-let author = document.querySelector(".author");
+// DOM elements
+const sbtn = document.querySelector(".socials-btn");
+const socials = document.querySelector(".socials");
+const profile = document.querySelector(".profile");
+const author = document.querySelector(".author");
 
-// function socmed_btn(){
-//     profile.classList.toggle("d-none");
-//     socials.classList.toggle("d-none");
-//     author.classList.toggle("author-active");
-//     if (profile.classList.contains("d-none")){
-//             profile.classList.toggle("d-none");
-//     }
-// }
+// Configuration
+const MOBILE_BREAKPOINT = 768;
 
-function socmed_btn(){
+// State
+let isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
+
+// Event listeners
+sbtn.addEventListener("click", toggleSocials);
+socials.addEventListener("mouseleave", resetToDefault);
+window.addEventListener("resize", debounce(handleResize, 1));
+window.addEventListener("load", initializeLayout);
+resetToDefault();
+
+// Functions
+function toggleSocials() {
     author.classList.toggle("author-active");
+    socials.classList.toggle("d-none");
 
-    if (window.innerWidth <= 768) {
-        // On mobile, toggle profile and socials visibility
+    if (isMobile) {
         profile.classList.toggle("d-none");
-        socials.classList.toggle("d-none");
     } else {
-        // On desktop, ensure profile is visible and socials hidden
         profile.classList.remove("d-none");
-        socials.classList.toggle("d-none");
-        author.classList.toggle("author-active");
     }
-
-
 }
+
+function resetToDefault() {
+    author.classList.remove("author-active");
+    profile.classList.remove("d-none");
+    socials.classList.add("d-none");
+}
+
+function handleResize() {
+    const waseMobile = isMobile;
+    isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
+
+    if (waseMobile !== isMobile) {
+        resetToDefault();
+        setLayoutForCurrentState();
+    }
+}
+
+function setLayoutForCurrentState() {
+    if (isMobile) {
+        // Mobile layout
+        if (author.classList.contains("author-active")) {
+            profile.classList.add("d-none");
+            socials.classList.remove("d-none");
+        } else {
+            profile.classList.remove("d-none");
+            socials.classList.add("d-none");
+        }
+    } else {
+        // Desktop layout
+        profile.classList.remove("d-none");
+        if (!author.classList.contains("author-active")) {
+            socials.classList.add("d-none");
+        }
+    }
+}
+
+function initializeLayout() {
+    setLayoutForCurrentState();
+}
+
+// Utility function to debounce resize events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Initialize
+initializeLayout();
