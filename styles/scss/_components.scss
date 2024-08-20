@@ -131,4 +131,42 @@ div :has(svg.share-btn){
   @extend %justify-center;
   @extend %align-center;
   gap: 20px;
+
+  a{  
+    transition: 0.15s ease-in ;
+  }
+
+  &>a:hover{
+    filter: brightness(90%);
+    transform: scale(105%);
+  }
+}
+
+.attribution { 
+  margin: 50px 0;
+  font-size: 11px; 
+  text-align: center;
+
+  a { 
+    opacity: 0.65;
+    text-decoration: none;
+    font-weight: 500;
+    color: $desaturated-dark-blue; 
+    
+    &:hover, &:active{
+      opacity: 1;
+      text-decoration: underline;
+      color: $vdark-grayish-blue;
+      @extend %fw-700;  
+    }
+  }
+
+}
+
+.d-none{
+  display: none;
+}
+
+.author-mob-active{
+  background: $vdark-grayish-blue;
 }

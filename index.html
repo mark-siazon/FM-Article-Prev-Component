@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
   <title>Frontend Mentor | Article preview component</title>
@@ -28,18 +28,24 @@
           <img src="assets/avatar-michelle.jpg" alt="A picture of the author, Michelle Appleton">
           <div>
             <p>Michelle Appleton</p>
-            <span>28 Jun 2020</span>
+            <span>Aug 20 2024</span>
           </div>
         </div>
         
         <div class="socials d-none">
           <p>Share</p>
-          <img src="assets/icon-facebook.svg" alt="Social icon of Facebook">
-          <img src="assets/icon-twitter.svg" alt="Social icon of Twitter">
-          <img src="assets/icon-pinterest.svg" alt="Social icon of Pinterest">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-facebook.svg" alt="Social icon of Facebook">
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-twitter.svg" alt="Social icon of Twitter">
+          </a>
+          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-pinterest.svg" alt="Social icon of Pinterest">
+          </a>
         </div>
 
-        <button onclick="socmed_btn()" class="socials-btn">
+        <button class="socials-btn">
           <div>
             <svg class="share-btn" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
               <path fill="currentcolor" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>

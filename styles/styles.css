@@ -24,7 +24,7 @@ div :has(svg.share-btn), .profile img {
   font-weight: 400;
 }
 
-.profile div p, .info strong {
+.profile div p, .info strong, .attribution a:hover, .attribution a:active {
   font-weight: 700;
 }
 
@@ -118,9 +118,9 @@ main.card > div > img {
 }
 @media only screen and (max-width: 720px) {
   .author {
-    padding: 0 26px 13px;
+    padding: 13px 26px;
     margin: 0;
-    background: hsl(217, 19%, 35%);
+    background: #fff;
     border-radius: 0 0 10px 10px;
   }
 }
@@ -141,7 +141,7 @@ main.card > div > img {
     background: hsl(217, 19%, 35%);
     position: absolute;
     right: -95px;
-    top: -63px;
+    top: -72px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   }
   .author-active .socials::after {
@@ -155,13 +155,13 @@ main.card > div > img {
     transform: rotate(45deg);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: -2;
-    top: 10px;
+    top: 15px;
     margin-left: 5px;
   }
   .author-active .socials-btn {
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 3px;
   }
 }
 
@@ -198,6 +198,34 @@ div :has(svg.share-btn) :hover, div :has(svg.share-btn) :active, div :has(svg.sh
 .socials {
   gap: 20px;
 }
+.socials a {
+  transition: 0.15s ease-in;
+}
+.socials > a:hover {
+  filter: brightness(90%);
+  transform: scale(105%);
+}
+
+.author-mob-active {
+  background: hsl(217, 19%, 35%);
+}
+
+.attribution {
+  margin: 50px 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  opacity: 0.65;
+  text-decoration: none;
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+}
+.attribution a:hover, .attribution a:active {
+  opacity: 1;
+  text-decoration: underline;
+  color: hsl(217, 19%, 35%);
+}
 
 .info strong {
   color: hsl(217, 19%, 35%);
@@ -227,13 +255,4 @@ div :has(svg.share-btn) :hover, div :has(svg.share-btn) :active, div :has(svg.sh
   color: hsl(210, 46%, 95%);
   font-size: 13px;
   gap: 20px;
-}
-
-.attribution {
-  margin: 50px 0;
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=styles.css.map */
