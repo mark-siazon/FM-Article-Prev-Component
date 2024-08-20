@@ -12,7 +12,6 @@ let isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
 
 // Event listeners
 sbtn.addEventListener("click", toggleSocials);
-socials.addEventListener("mouseleave", resetToDefault);
 window.addEventListener("resize", debounce(handleResize, 1));
 window.addEventListener("load", initializeLayout);
 resetToDefault();
@@ -24,6 +23,7 @@ function toggleSocials() {
 
     if (isMobile) {
         profile.classList.toggle("d-none");
+        author.classList.toggle("author-mob-active");
     } else {
         profile.classList.remove("d-none");
     }
@@ -42,12 +42,12 @@ function handleResize() {
     if (waseMobile !== isMobile) {
         resetToDefault();
         setLayoutForCurrentState();
+        author.classList.remove("author-mob-active");
     }
 }
 
 function setLayoutForCurrentState() {
-    if (isMobile) {
-        // Mobile layout
+    if (isMobile) { // Mobile layout
         if (author.classList.contains("author-active")) {
             profile.classList.add("d-none");
             socials.classList.remove("d-none");
@@ -55,8 +55,7 @@ function setLayoutForCurrentState() {
             profile.classList.remove("d-none");
             socials.classList.add("d-none");
         }
-    } else {
-        // Desktop layout
+    } else { // Desktop layout
         profile.classList.remove("d-none");
         if (!author.classList.contains("author-active")) {
             socials.classList.add("d-none");

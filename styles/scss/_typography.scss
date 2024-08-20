@@ -3,13 +3,13 @@
     color: $vdark-grayish-blue;
     font-size: 16px;
     @extend %fw-700;
-  }
-  strong+p{
-    color: $desaturated-dark-blue;
-    font-size: 13px;
-    @extend %fw-400;
-    word-spacing: 3px;
-    line-height: 1.35;
+    &+p{
+      color: $desaturated-dark-blue;
+      font-size: 13px;
+      @extend %fw-400;
+      word-spacing: 3px;
+      line-height: 1.35;
+    }
   }
 }
 
