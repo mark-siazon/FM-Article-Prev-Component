@@ -1,6 +1,6 @@
 # Frontend Mentor - Article preview component
 
-This is a solution to the [Article preview component coding challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/).
+This is a solution to the [Article preview component coding challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT).
 
 Frontend Mentor challenges help improve skills by building realistic projects.
 
@@ -63,16 +63,16 @@ All viewports were included (except for the 4k view), in case the observer wishe
 
 ### Links:
 
-- Live Site URL: [Website Link - Click Me](https://mark-siazon.github.io/)
-- Solution URL: [FrontEndMentor - Click Me](https://www.frontendmentor.io/solutions/)
+- Live Site URL: [Website Link - Click Me](https://mark-siazon.github.io/FM-Article-Prev-Component/)
+- Solution URL: [FrontEndMentor - Click Me](https://www.frontendmentor.io/solutions/article-preview-component-responsive-mobile-first-js-flexbox-scss-SwIx9agMs9)
 
 ## My process:
 
 ### Built with:
 
-- HTML5, CSS3, Vanila Javascript
-- Mobile-First Approach
-  - Grid Layout + Flexbox
+- HTML5, CSS3 
+- Javascript (Vanilla)
+- Mobile-First Approach (Flexbox)
 - SASS/SCSS
 
 ### What I learned:
@@ -82,8 +82,10 @@ Recap over some of the major learnings while working through this project:
 #### General things I've learned:
 
 - Review of Semantic HTML & CSS, CSS Flex Layout
-- Learned how to also use Grid Layout
 - Writing DRY code by combining similar styles
+- Recall absolute and relative positioning
+- Responsiveness problems with resizing and changing viewports
+- Customizing SVG icon for hover effect
 
 <hr>
 
