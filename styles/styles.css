@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
-@import url("");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 .socials, div :has(svg.share-btn), .profile, .author, .info, main.card > section, main.card, body {
   display: flex;
 }
