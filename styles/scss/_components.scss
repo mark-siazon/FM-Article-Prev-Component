@@ -1,4 +1,5 @@
 main.card{   
+  background-color: $light-grayish-blue;
   border-radius: 10px;
   @extend %box-shadow;
   @extend %d-flex;
@@ -6,6 +7,8 @@ main.card{
   @extend %justify-center;
   @extend %col;
   max-width: 310px;
+  z-index: 0;
+
 
   @include respond-to(small){
     flex-direction: row;

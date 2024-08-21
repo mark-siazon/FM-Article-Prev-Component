@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
-@import url("");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 .socials, div :has(svg.share-btn), .profile, .author, .info, main.card > section, main.card, body {
   display: flex;
 }
@@ -41,19 +40,18 @@ main.card {
 body {
   min-height: 100vh;
   font-family: Manrope;
+  background-color: hsl(212, 23%, 69%);
 }
 
 button {
   border: none;
 }
 
-.d-none {
-  display: none;
-}
-
 main.card {
+  background-color: hsl(210, 46%, 95%);
   border-radius: 10px;
   max-width: 310px;
+  z-index: 0;
 }
 @media only screen and (min-width: 720px) {
   main.card {
@@ -206,10 +204,6 @@ div :has(svg.share-btn) :hover, div :has(svg.share-btn) :active, div :has(svg.sh
   transform: scale(105%);
 }
 
-.author-mob-active {
-  background: hsl(217, 19%, 35%);
-}
-
 .attribution {
   margin: 50px 0;
   font-size: 11px;
@@ -225,6 +219,14 @@ div :has(svg.share-btn) :hover, div :has(svg.share-btn) :active, div :has(svg.sh
   opacity: 1;
   text-decoration: underline;
   color: hsl(217, 19%, 35%);
+}
+
+.d-none {
+  display: none;
+}
+
+.author-mob-active {
+  background: hsl(217, 19%, 35%);
 }
 
 .info strong {
